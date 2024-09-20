@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+div.Layout{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.Nav1 .div1 .tollbarBtn{
+  transition: visibility 2s, opacity 0.5s linear;
+ /* Adjust property, duration, and timing as needed */
+}
+.p{
+  font-size: laxx-large;
+}
