@@ -17,6 +17,15 @@ module.exports = {
           100: '#f3f4f6', 
           200: '#e5e7eb',
         }
+      },
+      
+      boxShadow: {
+        'blue': '0px 1px 20px 4px rgba(91,185,211,0.864)',
+        'blue-2': '0px 1px 25px 2px rgba(49,127,240,0.662)',
+      },
+      blur:{
+        '2a': '2px',
+        '4a' : '4px',
       }
     },
   },

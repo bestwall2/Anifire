@@ -20,7 +20,7 @@ export const NavBarStyled = styled.div`
   color: white ;
   font-size: xx-large;
   height: auto;
-  width: 100%;
+  
 }
 > ul li{
   

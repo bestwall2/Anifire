@@ -77,9 +77,9 @@ const Home = () => {
 
   return (
     <>
-      <div className="HomeLayout bg-dark-bg">
+      <div className="HomeLayout w-full bg-dark-bg">
         <div className="flex justify-center w-full">
-          <form className="max-w-md mx-auto" onSubmit={handleSearch}>
+          <form className="max-w-full mx-auto" onSubmit={handleSearch}>
             <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
             <div className="relative">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -90,7 +90,7 @@ const Home = () => {
               <input
                 type="search"
                 id="default-search"
-                className="shadow-sm-light block w-full mt-3 p-3 ps-9 text-lg text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                className="shadow-sm-light block w-full  mt-3 p-3 ps-9 text-lg text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Search For Anime..."
                 value={searchQuery} // Bind input value to searchQuery state
                 onChange={(e) => setSearchQuery(e.target.value)} // Update searchQuery state on input change
@@ -120,7 +120,7 @@ const Home = () => {
                 FStyle={mystyle}
                 key={anime.id} // Unique key for each anime item
                 onClick={() => ClickCard(index)} // Pass the index to handle click
-                imgStyle={"hover:blur-sm shadow-sky-50"} // Apply blur based on the clicked item
+                imgStyle={"hover:blur-2a"} // Apply blur based on the clicked item
                 imgUrl={anime.coverImage.extraLarge} // Use the anime's image URL from AniList
                 title={anime.title.english !== null
                   ? anime.title.english
