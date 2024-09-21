@@ -11,8 +11,10 @@ const Home = () => {
 
   // Fetch popular anime on component mount
   useEffect(() => {
+    setLoaded(false)
     const fetchPopularAnime = async () => {
       try {
+
         const response = await fetch('https://graphql.anilist.co', {
           method: 'POST',
           headers: {
@@ -23,19 +25,22 @@ const Home = () => {
             query: TrendingAnimeQuery,
           }),
         });
+
         const data = await response.json();
         setAnimeResults(data.data.Page.media);
-        setLoaded(true)
+
         // Store the fetched popular anime
       } catch (error) {
+        setLoaded(false)
         console.error("Error fetching popular anime:", error);
       }
+      setLoaded(true)
     };
 
 
-    if (searchQuery.length === 0) {
-      fetchPopularAnime();
-    }
+
+    fetchPopularAnime();
+
     // Call the function on initial page load
   }, []); // Empty dependency array means this runs once when the component mounts
 
@@ -107,7 +112,7 @@ const Home = () => {
         <div className="result">
           {searchQuery ? (
             <p className="truncate srf text-xl mt-5 ml-4 mb-2 text-gray-300 font-extrabold font-mono">
-              Search Result For: <strong className="title text-md underline decoration-dotted font-semibold font-normal text-blue-300">{searchQuery}</strong>
+              Search Result :<strong className="title text-md underline decoration-dotted font-semibold font-normal text-blue-300">{searchQuery}</strong>
             </p>
           ) : (<p className="truncate srf text-xl mt-5 ml-4 mb-2 text-gray-300 font-extrabold font-mono">
             Trending Anime Result<strong className="title text-sm underline decoration-dotted font-semibold font-normal text-blue-300"></strong>
@@ -121,6 +126,7 @@ const Home = () => {
                 key={anime.id} // Unique key for each anime item
                 onClick={() => ClickCard(index)} // Pass the index to handle click
                 imgStyle={"hover:blur-2a"} // Apply blur based on the clicked item
+                PlayBtnState={" hidden hover:visible"}
                 imgUrl={anime.coverImage.extraLarge} // Use the anime's image URL from AniList
                 title={anime.title.english !== null
                   ? anime.title.english

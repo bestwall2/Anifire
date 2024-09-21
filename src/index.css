@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
+
+* {
   font-family: "Exo 2", sans-serif;
 }
-div.Layout{
+
+div.Layout {
   height: 100vh;
   margin: 0;
   padding: 0;
+  margin-bottom: 8px;
 }
-.Nav1 .div1 .tollbarBtn{
-  transition: visibility 2s, opacity 0.5s linear;
- /* Adjust property, duration, and timing as needed */
-}
-.p{
+
+
+
+.p {
   font-size: laxx-large;
 }
