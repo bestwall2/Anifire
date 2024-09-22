@@ -10,6 +10,10 @@
   
 }
 
+/* .CardContainer .CardImageContainer a .CardImage {
+  max-height: 160px;
+  min-height: 160px;
+}
+ */
 
 
-@media screen and (max-width: 640px) {}
