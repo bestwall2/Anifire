@@ -20,7 +20,7 @@ const Toolbar = () => {
               className="self-center pl-1 h-12 object-cover object-center w-auto
             pb-1" alt="AnimeFire Logo" />
             <span className="self-center  text-3xl font-extrabold  whitespace-nowrap text-white">
-              Ani<strong className="Fire text-2.2xl font-250 text-blue-500">fire</strong>
+              Ani<strong className="Fire text-2.2xl font-250 text-piramy">fire</strong>
             </span>
           </a>
           <button data-collapse-toggle="navbar-default" type="button" className="tollbarBtn inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-white hover:bg-gray-700 focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false" onClick={HideMenu}>

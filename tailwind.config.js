@@ -12,7 +12,8 @@ module.exports = {
     extend: {
 
       colors: {
-        'dark-bg': '#1a1927',
+        'dark-bg': '#12141D',
+        'piramy':'#377DFF',
         'my-gray': {
           100: '#f3f4f6',
           200: '#e5e7eb',
@@ -20,11 +21,12 @@ module.exports = {
       },
 
       boxShadow: {
-        'blue': '0px 1px 20px 4px rgba(91,185,211,0.864)',
-        'blue-2': '0px 1px 25px 2px rgba(49,127,240,0.662)',
+        'blue': '0px 1px 20px 4px #377DFF',
+        'blue-2': '0px 1px 25px 2px #377DFF',
+        'CardBtm': '0px 4px 0px rgb(55,65,81)',
       },
       blur: {
-        '2a': '2px',
+        '2a': '0px',
         '4a': '4px',
       },
       font: {

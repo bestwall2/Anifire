@@ -6,14 +6,16 @@ const Card = (props) => {
   const CardCode = (
     <div
       className="
-      CardContainer m-0  border rounded-lg  shadow-lg bg-gray-800
-      border-gray-700 "
+      CardContainer m-0  border rounded-lg  shadow-CardBtm bg-gray-800
+      border-gray-700 border-2 "
       onClick={props.onClick}
     >
       <div className="CardImageContainer relative w-full min-h-fit block">
     < a href = "#" >
           <img
-            className={`CardImage rounded-lg transform transition-transform duration-100 ease-out hover:scale-105 hover:shadow-blue-2 w-full  object-cover object-center h-full ${props.imgStyle} `}
+            className={`CardImage rounded-lg transform transition-transform
+            duration-100 ease-out hover:scale-95 hover:shadow-blue-2 w-full
+            object-cover object-center h-full ${props.imgStyle} `}
             src={props.imgUrl}
             alt={props.title}
           />
