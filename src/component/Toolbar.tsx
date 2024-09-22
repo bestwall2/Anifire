@@ -12,7 +12,7 @@ const Toolbar = () => {
 
   return (
     <>
-      <nav className="Nav1 rounded-b-2xl bg-MybackColor border-gray-200 g-gray-900">
+      <nav className="Nav1 relative rounded-b-2xl bg-MybackColor border-gray-200 g-gray-900">
         <div className="div1 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto pt-2 pb-2 pl-4 pr-4">
           <a href="/" className="flex items-center space-x-0 rtl:space-x-reverse">
             <img

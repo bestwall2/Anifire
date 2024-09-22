@@ -95,7 +95,7 @@ const Home = () => {
               <input
                 type="search"
                 id="default-search"
-                className="shadow-sm-light block w-full  mt-3 p-3 ps-9 text-lg text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                className="Homeserach shadow-sm-light block w-full  mt-3 p-3 ps-9 text-lg text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Search For Anime..."
                 value={searchQuery} // Bind input value to searchQuery state
                 onChange={(e) => setSearchQuery(e.target.value)} // Update searchQuery state on input change
