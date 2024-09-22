@@ -1,32 +1,33 @@
 
 import React, { useEffect, useState } from 'react';
-
+import './styles/Card.css'
 const Card = (props) => {
 
   const CardCode = (
     <div
-      className="m-0  border rounded-lg  shadow-lg bg-gray-800 border-gray-700 w-auto h-auto sm:w-full sm:h-80 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
+      className="
+      CardContainer "
       onClick={props.onClick}
     >
-      <div className="w-full relative min-h-fit flex">
-        <a href="#">
+      <div className="CardImageContainer relative w-full min-h-fit block">
+    < a href = "#" >
           <img
-            className={`rounded-lg transform transition-transform duration-100 ease-out hover:scale-105 hover:shadow-blue-2 w-full  object-cover object-center h-full ${props.imgStyle} `}
+            className={`CardImage rounded-lg transform transition-transform duration-100 ease-out hover:scale-105 hover:shadow-blue-2 w-full  object-cover object-center h-full ${props.imgStyle} `}
             src={props.imgUrl}
             alt={props.title}
-            style={props.FStyle}
           />
-          <div class="Play opacity-40 h-6 w-6 absolute bottom-2 ml-11 mb-14">
+          <div class="Play h-6 w-6 absolute bottom-2 ml-11 mb-14">
             <svg viewBox="-0.5 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>play [#ffffff]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-347.000000, -3766.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M296.494737,3608.57322 L292.500752,3606.14219 C291.83208,3605.73542 291,3606.25002 291,3607.06891 L291,3611.93095 C291,3612.7509 291.83208,3613.26444 292.500752,3612.85767 L296.494737,3610.42771 C297.168421,3610.01774 297.168421,3608.98319 296.494737,3608.57322" id="play-[#ffffff]"> </path> </g> </g> </g> </g></svg>
           </div>
-        </a>
+        <div className="title rounded-lg font-semibold bg-gradient-to-t rounded-lg from-[rgb(0,0,0)] to-[rgba(0,0,0,0.419)] text-center  absolute bottom-0 text-xs
+        line-clamp-2 text-gray-100 h-auto w-full ">
+          <p>{props.title}</p>
+        </div>
+        </a >
       </div >
-      <div className="h3 align-middle content-center text-center text-xs  line-clamp-2 text-gray-100 p-1 h-fit  pb-0 ">
-        <p>{props.title}</p>
-      </div>
     </div >
   );
-  return (CardCode);
+return (CardCode);
 };
 
 export default Card;

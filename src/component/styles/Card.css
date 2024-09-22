@@ -1,0 +1,15 @@
+.CardContainer>.CardImageContainer>a>.Play {
+  display: none;
+  background: transparent;
+  
+}
+
+
+.CardContainer .CardImageContainer a .CardImage:hover+.Play {
+  display: block;
+  
+}
+
+
+
+@media screen and (max-width: 640px) {}

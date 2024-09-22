@@ -29,6 +29,12 @@ module.exports = {
       },
       font: {
         'LogoFt': 'font-family: "Pacifico", cursive',
+      },
+      from: {
+        'black1': 'rgb(0,0,0)'
+      },
+      to: {
+        'trans': 'rgba(0,0,0,0.711)'
       }
     },
   },
