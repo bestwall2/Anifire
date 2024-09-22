@@ -6,7 +6,8 @@ const Card = (props) => {
   const CardCode = (
     <div
       className="
-      CardContainer "
+      CardContainer m-0  border rounded-lg  shadow-lg bg-gray-800
+      border-gray-700 "
       onClick={props.onClick}
     >
       <div className="CardImageContainer relative w-full min-h-fit block">
