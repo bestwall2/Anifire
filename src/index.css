@@ -82,4 +82,5 @@ div.Layout {
 
 .TollBarTitle{
   transform: translateX(5px);
+  background: red;
 }
