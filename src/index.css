@@ -81,5 +81,5 @@ div.Layout {
 /* Initial state, before animation */
 
 .TollBarTitle{
-  translate:;
+  translate:0px 5px;
 }
