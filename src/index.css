@@ -80,7 +80,3 @@ div.Layout {
 }
 /* Initial state, before animation */
 
-.TollBarTitle{
-  transform: translateX(5px);
-  background: red;
-}
