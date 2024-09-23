@@ -5,7 +5,7 @@ strong {
   font-family: "Pacifico", cursive;
   letter-spacing: 2px;
   .TollBarTitle{
-  transform: translateX(5px);
+  
   background: red;
 }
 }
