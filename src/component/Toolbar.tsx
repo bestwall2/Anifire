@@ -16,7 +16,7 @@ const Toolbar = () => {
         <div className="div1 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto pt-2 pb-2 pl-4 pr-4">
           <a href="/" className="flex items-center space-x-0 rtl:space-x-reverse">
             <img
-              src="https://i.postimg.cc/7YycQRcS/Picsart-24-09-20-03-41-26-206.png"
+              src="."
               className="self-center pl-1 h-12 object-cover object-center w-auto
             pb-1" alt="AnimeFire Logo" />
             <span className="self-center  text-3xl font-extrabold  whitespace-nowrap text-white">
