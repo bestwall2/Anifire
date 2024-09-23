@@ -4,5 +4,6 @@
 strong {
   font-family: "Pacifico", cursive;
   letter-spacing: 2px;
+  background: red;
   transform: translateX(5px);
 }
