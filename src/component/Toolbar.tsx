@@ -17,7 +17,7 @@ const Toolbar = () => {
           <a href="/" className="flex items-center space-x-0 rtl:space-x-reverse">
             <img
               src="https://i.postimg.cc/HL3MNJCb/20240923-021951.png"
-              className="self-center pl-1 h-12 object-cover object-center w-auto
+              className="self-center pl-1 h-14 object-cover object-center w-auto
             pb-1" alt="AnimeFire Logo" />
             <span className="self-center  text-3xl font-extrabold  whitespace-nowrap text-white">
               Ani<strong className="Fire text-2.2xl font-250 text-piramy">fire</strong>
