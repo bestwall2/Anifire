@@ -20,7 +20,7 @@ const Toolbar = () => {
               src="https://i.postimg.cc/HL3MNJCb/20240923-021951.png"
               className="self-center  pl-0 h-14 object-cover object-center w-auto
             pb-1" alt="AnimeFire Logo" />
-            <span className="self-center translate-x-0.5 text-3xl font-extrabold  whitespace-nowrap text-white">
+            <span className="self-center  text-3xl font-extrabold  whitespace-nowrap text-white">
               Ani<strong className="Fire text-2.2xl font-250 text-piramy">fire</strong>
             </span>
           </a>
