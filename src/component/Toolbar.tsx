@@ -14,7 +14,7 @@ const Toolbar = () => {
     <>
       <nav className="Nav1 relative rounded-b-2xl bg-MybackColor border-gray-200 g-gray-900">
         <div className="div1 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto pt-2 pb-2 pl-4 pr-4">
-          <a href="/" className="flex items-center space-x-0 rtl:space-x-reverse">
+          <a href="/" className="flex items-center  rtl:space-x-reverse">
             <img
               src="https://i.postimg.cc/HL3MNJCb/20240923-021951.png"
               className="self-center pl-1 h-14 object-cover object-center w-auto
