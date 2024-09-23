@@ -5,11 +5,17 @@ const Navigation = () => {
   return (
     <NavBarStyled>
       <hr className="border-gray-700 rounded-b-md mb-3 "></hr>
-      <h1 className="title font-extrabold text-white font-mono">Ani<strong
-      className="text-3xl font-mono font-bold text-piramy">Fire</strong></h1>
+      <div class="LogoTitle flex">
+        <img
+          src="https://i.postimg.cc/HL3MNJCb/20240923-021951.png"
+          className="self-center  pl-0 h-14 object-cover object-center w-auto
+            pb-1" alt="AnimeFire Logo" />
+        <h1 className="title font-extrabold text-white font-mono">Ani<strong
+          className="text-3xl font-mono font-bold text-piramy">Fire</strong></h1>
+      </div>
       <p className="text-gray-100  mb-2 ">This site does not store any files on our server, we are linked to the media which is hosted on 3rd party services.</p>
       <hr className="border-gray-700 rounded-b-md m-2 "></hr>
-      <ul className="  list grid text-sm md:text-2xl mb-3 mt-3 md:text-center font-medium grid-cols-2 md:grid-cols-3 gap-1">
+      <ul className="list grid text-sm md:text-2xl mb-3 mt-3 md:text-center font-medium grid-cols-2 md:grid-cols-3 gap-1">
         <li><a href="#">DMCA</a></li>
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Terms of Service</a></li>

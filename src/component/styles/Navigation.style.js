@@ -13,9 +13,10 @@ export const NavBarStyled = styled.div`
   padding: 0px 0px 0px 5px;
   font-size: small;
 }
-> .title{
+> div > .title{
   display: block;
   font-weight: bold;
+  transform: translateX(-6px);
   font-family: "Pacifico", cursive;
   margin: 0px 8px;
   color: white ;
