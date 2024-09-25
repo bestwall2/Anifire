@@ -3,7 +3,7 @@ import Card from './Card';
 import React, { useEffect, useState } from 'react';
 import { searchAnimeQuery, PopularAnimeQuery, TrendingAnimeQuery } from "../hooks/searchQueryStrings";
 
-const Home = () => {
+const HomeComp = () => {
   const [searchQuery, setSearchQuery] = useState(""); // Store the search query
   const [animeResults, setAnimeResults] = useState([]); // Store the fetched anime data
   const [blurredIndex, setBlurredIndex] = useState(null); // Track which item is blurred
@@ -143,4 +143,5 @@ const Home = () => {
 const mystyle = {
   height: "23",
 }
-export default Home;
+
+export default HomeComp;

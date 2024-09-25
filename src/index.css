@@ -79,3 +79,15 @@ div.Layout {
   animation: fadeSlideUp 0.3s forwards;
 }
 /* Initial state, before animation */
+.react-modal-sheet-content {
+  background: #2A2C34;
+  color: white;
+}
+.react-modal-sheet-header {
+  background: #2A2C34;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+.react-modal-sheet-container {
+  max-height: 50%;
+}

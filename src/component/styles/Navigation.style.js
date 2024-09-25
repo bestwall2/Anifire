@@ -18,8 +18,9 @@ export const NavBarStyled = styled.div`
   font-weight: bold;
   transform: translateX(-6px);
   font-family: "Pacifico", cursive;
-  margin: 0px 8px;
+  margin: 0px 0px;
   color: white ;
+  text-align: center;
   font-size: xx-large;
   height: auto;
   letter-spacing: 2px;

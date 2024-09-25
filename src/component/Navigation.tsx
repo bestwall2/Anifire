@@ -8,7 +8,7 @@ const Navigation = () => {
       <div class="LogoTitle flex">
         <img
           src="https://i.postimg.cc/HL3MNJCb/20240923-021951.png"
-          className="self-center  pl-0 h-14 object-cover object-center w-auto
+          className="self-center  pl-0 h-12 object-cover object-center w-auto
             pb-1" alt="AnimeFire Logo" />
         <h1 className="title font-extrabold text-white font-mono">Ani<strong
           className="text-3xl font-mono font-bold text-piramy">Fire</strong></h1>
