@@ -54,7 +54,10 @@ export let TrendingAnimeQuery = `
 				}
 				description
 				episodes
-				
+				format
+				startDate{
+				  year
+				}
 			}
 		}
 	}
@@ -137,6 +140,10 @@ export let searchAnimeQuery = `
 				coverImage {
 					extraLarge
 					large
+				}
+				format
+				startDate{
+				  year
 				}
 			}
 		}

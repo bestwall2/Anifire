@@ -1,12 +1,12 @@
-import SheetBtm from '../component/SheetBtm';
-import React from 'react'
+import SheetBtm from "../component/SheetBtm";
+import React from "react";
 
 const Details = () => {
-  return (
-    <div>
-    <SheetBtm />
-    </div>
-  )
-}
+    return (
+        <div>
+            <SheetBtm />
+        </div>
+    );
+};
 
-export default Details
+export default Details;

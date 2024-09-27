@@ -28,7 +28,7 @@ const HomeComp = () => {
 
         const data = await response.json();
         setAnimeResults(data.data.Page.media);
-
+        
         // Store the fetched popular anime
       } catch (error) {
         setLoaded(false)
@@ -118,11 +118,13 @@ const HomeComp = () => {
             Trending Anime Result<strong className="title text-sm underline decoration-dotted font-semibold font-normal text-blue-300"></strong>
           </p>)}
         </div>
-        <div className="MyGirdList  sm:grid-cols-6 gap-2 mt-3 ml-2 mr-2 ">
+        <div className="MyGirdList  sm:grid-cols-5 gap-2 mt-3 ml-2 mr-2 ">
           {animeResults.map((anime, index) => (
             loaded ?
               <Card
                 FStyle={mystyle}
+                type={anime.format}
+                year={anime.startDate.year}
                 key={anime.id} // Unique key for each anime item
                 onClick={() => ClickCard(index)} // Pass the index to handle click
                 imgStyle={"hover:blur-2a"} // Apply blur based on the clicked item

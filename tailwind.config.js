@@ -12,8 +12,8 @@ module.exports = {
     extend: {
 
       colors: {
-        'dark-bg': '#12141D',
-        'piramy':'#377DFF',
+        'dark-bg': '#111827',
+        'piramy': '#377DFF',
         'my-gray': {
           100: '#f3f4f6',
           200: '#e5e7eb',

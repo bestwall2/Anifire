@@ -19,29 +19,21 @@ div.Layout {
 .CardImage {
   min-height: 160px;
   max-height: 160px;
+ 
 }
 
 @media screen and (min-width: 1280px) {
   .CardImage {
-    min-height: 160px;
-    max-height: 160px;
+    height: auto;
   }
 }
 
 @media screen and (max-width: 1280px) {
   .CardImage {
-    
-    
     height: auto
   }
 }
 
-.MyGirdList {
-  display: grid;
-  grid-row-start: swap;
-  grid-template-columns:repeat(3, 1fr);
-  
-}
 
 .Play {
   display: flex;
@@ -55,10 +47,11 @@ div.Layout {
 .Homeserach {
   max-width: 320px;
   min-width: 320px;
-  background: #2A2C34;
+  background: #111827;
 }
+
 .CardContainer:hover{
-  box-shadow: 0px 4px 0px #377DFF;
+ /* box-shadow: 0px 1px 10px #377DFF;*/
 }
 
 
@@ -74,17 +67,77 @@ div.Layout {
 }
 
 .CardContainer{
+  margin: 2px;
   opacity: 0;
   transform: translate(0px, 10px);
   animation: fadeSlideUp 0.3s forwards;
+  
+}
+.MyGirdList {
+  display: grid;
+  margin-right: 5px;
+  margin-left: 5px;
+  grid-row-start: swap;
+  grid-template-columns:repeat(3, 1fr);
 }
 /* Initial state, before animation */
+.Anititle {
+  position: absolute;
+  bottom: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  padding: 5px;
+  width: 100%;
+  background: linear-gradient(to top, #000000e4 15% ,#00000000 80%);
+  border-radius: 7px;
+  text-shadow: 0px 1px 10px #000;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; /* Limits text to 4 lines */
+  overflow: hidden;
+}
+.type {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  color: white;
+  padding: 4px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0px 1px 10px #377DFF;
+  height: fit-content;
+  width: fit-content;
+  background: #377DFF;
+}
+.year {
+  position: absolute;
+  top: 20%;
+  bottom: 0;
+  color: white;
+  padding: 4px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0px 1px 10px #37d0ff;
+  height: fit-content;
+  width: fit-content;
+  background: linear-gradient(to left, #37d0ff, #377DFF);
+}
+/* The Design Of Bottom Sheet */
 .react-modal-sheet-content {
-  background: #2A2C34;
+  background: #111827;
   color: white;
 }
 .react-modal-sheet-header {
-  background: #2A2C34;
+  background: #111827;
   border-top-right-radius: 7px;
   border-top-left-radius: 7px;
 }
