@@ -47,7 +47,7 @@ div.Layout {
 .Homeserach {
   max-width: 320px;
   min-width: 320px;
-  background: #111827;
+  background: #2A2C34;
 }
 
 .CardContainer:hover{
@@ -133,11 +133,11 @@ div.Layout {
 }
 /* The Design Of Bottom Sheet */
 .react-modal-sheet-content {
-  background: #111827;
+  background: #12141D;
   color: white;
 }
 .react-modal-sheet-header {
-  background: #111827;
+  background: #12141D;
   border-top-right-radius: 7px;
   border-top-left-radius: 7px;
 }

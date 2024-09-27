@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const NavBarStyled = styled.div`
-  background-color: #111827;
+  background-color: #12141D;
   display: flex;
   flex-direction: row;
   flex-direction: row-reverse;

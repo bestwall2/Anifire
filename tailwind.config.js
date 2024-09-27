@@ -12,7 +12,7 @@ module.exports = {
     extend: {
 
       colors: {
-        'dark-bg': '#111827',
+        'dark-bg': '#12141D',
         'piramy': '#377DFF',
         'my-gray': {
           100: '#f3f4f6',
