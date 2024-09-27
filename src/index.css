@@ -144,3 +144,29 @@ div.Layout {
 .react-modal-sheet-container {
   max-height: 50%;
 }
+
+.Cards{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#CardBtmList{
+  display: flex;
+  justify-content: center;
+  align-content: center; 
+  font-size: 1.2rem;
+  margin: 5px;
+  margin-bottom:8px;
+  padding: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-shadow: 1px 1px 20px #2a2c34c4;
+  text-align: center;
+  border-radius: 8px;
+  background: #2A2C34;
+}
+
+#CardBtmList p{
+  text-align: center;
+  width: 100%;
+  
+}

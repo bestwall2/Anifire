@@ -27,7 +27,7 @@ const HomeComp = () => {
         });
 
         const data = await response.json();
-        setAnimeResults(data.data.Page.media);
+        //setAnimeResults(data.data.Page.media);
         
         // Store the fetched popular anime
       } catch (error) {
