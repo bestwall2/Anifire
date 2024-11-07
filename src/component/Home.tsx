@@ -1,7 +1,7 @@
 import CardSk from './Skeleton/CardSk';
 import Card from './Card';
 import React, { useEffect, useState } from 'react';
-import { searchAnimeQuery, PopularAnimeQuery, TrendingAnimeQuery } from "../hooks/searchQueryStrings";
+import { searchAnimeQuery, TrendingAnimeQuery } from "../hooks/searchQueryStrings";
 
 const HomeComp = () => {
   const [searchQuery, setSearchQuery] = useState(""); // Store the search query
