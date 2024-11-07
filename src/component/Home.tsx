@@ -1,7 +1,7 @@
 import CardSk from './Skeleton/CardSk';
 import Card from './Card';
 import React, { useEffect, useState } from 'react';
-import { searchAnimeQuery, TrendingAnimeQuery } from "../hooks/searchQueryStrings";
+import { searchAnimeQuery, TrendingAnimeQuery } from "../hooks/searchQueryStrings.js";
 
 // Define types for the anime results to improve clarity and type safety
 interface AnimeResult {
