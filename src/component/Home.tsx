@@ -127,7 +127,7 @@ const HomeComp = () => {
               <Card
                 key={anime.id} // Unique key for each anime item
                 type={anime.format}
-                year={anime.startDate.year}
+                year={anime.startDate.year.toString()}
                 imgStyle={"hover:blur-2a"}
                 PlayBtnState={" hidden hover:visible"}
                 imgUrl={anime.coverImage.extraLarge} // Use the anime's image URL from AniList
