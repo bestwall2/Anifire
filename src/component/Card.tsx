@@ -1,14 +1,25 @@
-
+import React from 'react';
 import './styles/Card.css';
 
-const Card = (props) => {
+// Define types for the props
+interface CardProps {
+  imgUrl: string;
+  title: string;
+  type: string;
+  year: string;
+  linkUrl?: string; // Optional prop
+  imgStyle?: string; // Optional prop for additional image styles
+  onClick?: () => void; // Optional click handler
+}
+
+const Card: React.FC<CardProps> = (props) => {
   return (
     <div
       className="CardContainer m-0 border rounded-lg bg-gray-800 border-gray-700"
       onClick={props.onClick}
     >
       <div className="CardImageContainer rounded-lg overflow-hidden relative w-full min-h-fit block">
-        <a href={props.linkUrl || "#"}> {/* Replaced '#' with prop linkUrl for flexibility */}
+        <a href={props.linkUrl || "#"}>
           <img
             className={`CardImage transform transition-transform duration-300 ease-out hover:scale-125 hover:shadow-blue-2 w-full object-cover object-center h-full ${props.imgStyle}`}
             src={props.imgUrl}
