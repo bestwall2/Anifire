@@ -3,18 +3,32 @@ import Card from './Card';
 import React, { useEffect, useState } from 'react';
 import { searchAnimeQuery, TrendingAnimeQuery } from "../hooks/searchQueryStrings";
 
+// Define types for the anime results to improve clarity and type safety
+interface AnimeResult {
+  id: number;
+  title: {
+    english: string | null;
+    userPreferred: string;
+  };
+  format: string;
+  startDate: {
+    year: number;
+  };
+  coverImage: {
+    extraLarge: string;
+  };
+}
+
 const HomeComp = () => {
   const [searchQuery, setSearchQuery] = useState(""); // Store the search query
-  const [animeResults, setAnimeResults] = useState([]); // Store the fetched anime data
-  const [blurredIndex, setBlurredIndex] = useState(null); // Track which item is blurred
+  const [animeResults, setAnimeResults] = useState<AnimeResult[]>([]); // Store the fetched anime data
   const [loaded, setLoaded] = useState(false);
 
   // Fetch popular anime on component mount
   useEffect(() => {
-    setLoaded(false)
+    setLoaded(false);
     const fetchPopularAnime = async () => {
       try {
-
         const response = await fetch('https://graphql.anilist.co', {
           method: 'POST',
           headers: {
@@ -27,33 +41,22 @@ const HomeComp = () => {
         });
 
         const data = await response.json();
-        //setAnimeResults(data.data.Page.media);
-        
-        // Store the fetched popular anime
+        setAnimeResults(data.data.Page.media); // Store the fetched popular anime
       } catch (error) {
-        setLoaded(false)
         console.error("Error fetching popular anime:", error);
       }
-      setLoaded(true)
+      setLoaded(true);
     };
 
-
-
     fetchPopularAnime();
-
-    // Call the function on initial page load
   }, []); // Empty dependency array means this runs once when the component mounts
 
-  const ClickCard = (index) => {
-    console.log("hello")
-    // Update state with the index of the clicked item
-  };
-
-  const handleSearch = async (e) => {
-    setLoaded(false)
+  const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault(); // Prevent form from submitting normally
 
     if (!searchQuery) return; // Don't search if the input is empty
+
+    setLoaded(false); // Set loading state before starting the search
 
     try {
       const response = await fetch('https://graphql.anilist.co', {
@@ -69,16 +72,16 @@ const HomeComp = () => {
           },
         }),
       });
+
       const data = await response.json();
       setAnimeResults(data.data.Page.media);
-      setLoaded(true)
-      // Store the fetched anime data
+      setLoaded(true);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
-  const CardSkl = <CardSk />
 
+  const CardSkl = <CardSk />;
 
   return (
     <>
@@ -95,7 +98,7 @@ const HomeComp = () => {
               <input
                 type="search"
                 id="default-search"
-                className="Homeserach shadow-sm-light block w-full  mt-3 p-3 ps-9 text-lg text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                className="Homeserach shadow-sm-light block w-full mt-3 p-3 ps-9 text-lg text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Search For Anime..."
                 value={searchQuery} // Bind input value to searchQuery state
                 onChange={(e) => setSearchQuery(e.target.value)} // Update searchQuery state on input change
@@ -118,32 +121,25 @@ const HomeComp = () => {
             Trending Anime Result<strong className="title text-sm underline decoration-dotted font-semibold font-normal text-blue-300"></strong>
           </p>)}
         </div>
-        <div className="MyGirdList  sm:grid-cols-5 gap-2 mt-3 ml-2 mr-2 ">
-          {animeResults.map((anime, index) => (
-            loaded ?
+        <div className="MyGirdList sm:grid-cols-5 gap-2 mt-3 ml-2 mr-2">
+          {animeResults.map((anime) => (
+            loaded ? (
               <Card
-                FStyle={mystyle}
+                key={anime.id} // Unique key for each anime item
                 type={anime.format}
                 year={anime.startDate.year}
-                key={anime.id} // Unique key for each anime item
-                onClick={() => ClickCard(index)} // Pass the index to handle click
-                imgStyle={"hover:blur-2a"} // Apply blur based on the clicked item
+                imgStyle={"hover:blur-2a"}
                 PlayBtnState={" hidden hover:visible"}
                 imgUrl={anime.coverImage.extraLarge} // Use the anime's image URL from AniList
-                title={anime.title.english !== null
-                  ? anime.title.english
-                  : anime.title.userPreferred} // Use the anime's romaji title from AniList
-              /> : CardSkl
+                title={anime.title.english || anime.title.userPreferred} // Use the anime's romaji title
+              />
+            ) : CardSkl
           ))}
         </div>
-        {animeResults.length === 0 && <h2 className="  text-white m-10 text-sm font-extrabold p-3 underline  content-center space-x-1 place-items-center text-center h-full align-middle">No Search Results Found..!?</h2>}
+        {animeResults.length === 0 && <h2 className="text-white m-10 text-sm font-extrabold p-3 underline content-center space-x-1 place-items-center text-center h-full align-middle">No Search Results Found..!?</h2>}
       </div>
     </>
   );
 };
-
-const mystyle = {
-  height: "23",
-}
 
 export default HomeComp;
