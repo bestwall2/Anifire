@@ -1,4 +1,4 @@
-import React from 'react'
+
 import HomeComp from '../component/Home.tsx';
 import Navigation from "../component/Navigation.tsx";
 import Toolbar from "../component/Toolbar.tsx";
